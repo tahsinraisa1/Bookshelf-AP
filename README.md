@@ -65,9 +65,9 @@ After starting the application, we define a connection for mongodb. Once we esta
   **Delete books (DELETE request):**
     Use *localhost:3000/books/id* to delete a specific book by its id.
     
-  **View Booklist:**
+  **View Booklist (GET request):**
     Use *localhost:3000/books* to view all the books added by all users.
     
-  **View Book detail:**
+  **View Book details (GET request):**
     Use *localhost:3000/books/id* to view further details of books.
 
