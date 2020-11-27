@@ -5,7 +5,7 @@ Users can signup and login and then have access to add, edit, delete books. Book
 
 Use 'npm install' to install necessary packages and 'npm run start' to run the application.
 
-**Connecting to MongoDB**
+**Connecting to MongoDB:**
 After starting the application, we define a connection for mongodb. Once we establish a connection from the terminal, we can access our API from localhost:3000. Then we use Postman for the requests.
 
   ## USERS API
