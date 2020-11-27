@@ -21,20 +21,20 @@ After starting the application, we define a connection for mongodb. Once we esta
 
    **Logging in users (POST request):**
     Use *localhost:3000/users/login* to login as an existing user by entering a **JSON OBJECT** having mandatory fields: email, password. In response, the logged in user info is returned with an authentication token. E.g.,
-    {
+    ```{
         "email": "hwolowitz456@yahoo.com",
         "password": "de$p3j123"
-    }
+      }```
 
    **Read user profile (GET request):**
     Use *localhost:3000/users/me* to access your own profile while logged in. In response, either your profile info **or** an authentication error will occur if not logged in.
 
    **Update user profile (PATCH request):**
     Use *localhost:3000/users/me* to update your own profile while logged in. Enter a **JSON OBJECT** having valid fields to change, along with new values. In response, either your profile info **or** an authentication error will occur if not logged in. E.g.,
-    {
+    ```{
         "email": "viity22@yahoo.com",
         "age": "56"
-    }
+      }```
 
    **Delete user (DELETE request):**
     Use *localhost:3000/users/me* to delete your id when logged in.
@@ -49,18 +49,18 @@ After starting the application, we define a connection for mongodb. Once we esta
   
    **Adding books (POST request):**
     Use *localhost:3000/books* to add a book by entering a **JSON OBJECT** having mandatory fields: isbn, title, author, published. In response, the newly created book info is returned. E.g.,
-    {
+    ```{
       "isbn": "978-3-16-148410-0",
       "title": "Breaking Bad",
       "author": "Vince Gilligan",
       "published": 2008
-    }
+    }```
 
   **Update books (PATCH request):**
     Use *localhost:3000/books/id* to update a specific book while logged in. Enter a **JSON OBJECT** having valid fields to change, along with new values. In response, either your profile info **or** an authentication error will occur if not logged in. E.g.,
-    {
+    ```{
       "author": "Walter H. White"
-    }
+    }```
 
   **Delete books (DELETE request):**
     Use *localhost:3000/books/id* to delete a specific book by its id.
