@@ -19,16 +19,8 @@ router.post('/books', auth, async (req, res) => {
 //READ ALL
 router.get('/books', async (req, res) => {
     try{
-        const books = await Book.find({})
-        const str = {}
-        books.forEach((book, i) => {
-            str[i+1]= {
-                id: book._id,
-                title: book.title,
-                author: book.author
-            }
-        })
-        res.send(str)
+        const books = await Book.find({}, {title: 1, author: 1})
+        res.send(books)
     } catch(err) {
         res.status(500).send()
     }
