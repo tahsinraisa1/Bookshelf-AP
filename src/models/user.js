@@ -45,6 +45,8 @@ const userSchema = mongoose.Schema({
         }
     }]
     
+}, {
+    timestamps: true
 })
 userSchema.virtual('books', {
     ref: 'Book',

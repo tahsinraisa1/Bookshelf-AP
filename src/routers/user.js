@@ -41,7 +41,7 @@ router.post('/users/logout', auth, async (req, res) => {
     }
 })
 //LOGOUT ALL
-router.post('/users/logoutAll', auth, async (req, res) => {
+router.post('/users/logout-all', auth, async (req, res) => {
     try {
         req.user.tokens = []
         await req.user.save()

@@ -32,6 +32,8 @@ const bookSchema = mongoose.Schema({
         required: true,
         ref: 'User'
     }
+}, {
+    timestamps: true
 })
 
 // bookSchema.methods.toJSON = function() {

@@ -18,8 +18,15 @@ router.post('/books', auth, async (req, res) => {
 })
 //READ ALL
 router.get('/books', async (req, res) => {
+    const match= {}
+    if(req.query.author) {
+        match.author = req.query.author
+    }
+    if(req.query.published) {
+        match.published = parseInt(req.query.published)
+    }
     try{
-        const books = await Book.find({}, {title: 1, author: 1})
+        const books = await Book.find(match, {title: 1, author: 1})
         res.send(books)
     } catch(err) {
         res.status(500).send()
